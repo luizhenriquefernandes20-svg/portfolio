@@ -33,6 +33,12 @@ export function Hero({ onScrollTo }: { onScrollTo: (id: string) => void }) {
           <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
         </span>
         Disponível para projetos
+        {contactInfo.location && (
+          <>
+            <span className="text-muted-foreground/40">·</span>
+            <span className="text-muted-foreground normal-case tracking-normal">{contactInfo.location}</span>
+          </>
+        )}
       </motion.p>
       <motion.h1
         variants={item}

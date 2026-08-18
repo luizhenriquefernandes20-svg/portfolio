@@ -179,10 +179,38 @@ export const projects: Project[] = [
 export const education: EducationItem[] = [
   {
     year: "2024 — 2026",
-    title: "Desenvolvimento de Software",
-    institution: "Instituição de Ensino Superior",
+    title: "Tecnologia em Sistemas Embarcados",
+    institution: "Fatec Jundiaí",
     type: "degree",
     detail: "Curso Superior · Previsão de conclusão: 2026",
+  },
+  {
+    year: "2022 — 2024",
+    title: "Técnico em Edificações",
+    institution: "ETEC Vasco Antonio Venchiarutti",
+    type: "degree",
+    detail: "Ensino Médio + Técnico · Concluído em novembro de 2024",
+  },
+  {
+    year: "2025",
+    title: "Python",
+    institution: "Certificação",
+    type: "cert",
+    detail: "8 horas",
+  },
+  {
+    year: "2025",
+    title: "Introdução à Ciência de Dados",
+    institution: "Certificação",
+    type: "cert",
+    detail: "6 horas",
+  },
+  {
+    year: "2025",
+    title: "Google: Inteligência Artificial e Produtividade",
+    institution: "Certificação",
+    type: "cert",
+    detail: "2 horas",
   },
   {
     year: "2024",
@@ -226,10 +254,8 @@ export const contactInfo = {
   whatsapp: "https://wa.me/5511975181445",
   linkedin: "https://www.linkedin.com/in/luiz-henrique-fernandes-da-silva-a583a5340/",
   github: "https://github.com/luizhenriquefernandes20-svg",
-  // TODO: coloque seu currículo em PDF na pasta `public/` com o nome `cv.pdf`
-  // e troque o valor abaixo para "/cv.pdf". Enquanto for `null`, o botão
-  // "Baixar Currículo" fica oculto (mesmo padrão usado em `github`/`demo`).
-  resume: null as string | null,
+  location: "Jundiaí, SP",
+  resume: "/cv.pdf" as string | null,
 };
 
 export const skillGroups: { label: string; items: string[] }[] = [
@@ -237,4 +263,6 @@ export const skillGroups: { label: string; items: string[] }[] = [
   { label: "Backend", items: ["Node.js", "Express", "Python", "Flask"] },
   { label: "Banco de Dados", items: ["MySQL", "SQLite", "Modelagem Relacional"] },
   { label: "Ferramentas", items: ["Docker", "Git", "JWT", "Swagger", "WebSockets"] },
+  { label: "Embarcados & IoT", items: ["ESP32", "Sensores", "Wi-Fi", "Monitoramento"] },
+  { label: "Adicionais", items: ["Inteligência Artificial", "Ciência de Dados"] },
 ];

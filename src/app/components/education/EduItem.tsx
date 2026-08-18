@@ -22,7 +22,7 @@ export function EduItem({ item, index = 0 }: { item: EducationItem; index?: numb
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.4, delay: (index % 6) * 0.06, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="shrink-0 font-mono text-xs text-muted-foreground pt-0.5 w-10">{item.year}</div>
+      <div className="shrink-0 font-mono text-xs text-muted-foreground pt-0.5 w-24 whitespace-nowrap">{item.year}</div>
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-3 mb-1">
           <h4 className="font-mono text-sm font-semibold text-foreground">{item.title}</h4>

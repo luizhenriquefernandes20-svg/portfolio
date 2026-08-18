@@ -81,7 +81,7 @@ export function Hero({ onScrollTo }: { onScrollTo: (id: string) => void }) {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             href={contactInfo.resume}
-            download
+            download="curriculo.pdf"
             className="px-6 py-3 border border-border text-foreground font-mono text-sm rounded-lg hover:border-foreground/30 hover:bg-muted transition-colors flex items-center gap-2"
           >
             <Download size={14} />

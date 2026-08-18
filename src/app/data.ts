@@ -196,21 +196,18 @@ export const education: EducationItem[] = [
     title: "Python",
     institution: "Certificação",
     type: "cert",
-    detail: "8 horas",
   },
   {
     year: "2025",
     title: "Introdução à Ciência de Dados",
     institution: "Certificação",
     type: "cert",
-    detail: "6 horas",
   },
   {
     year: "2025",
     title: "Google: Inteligência Artificial e Produtividade",
     institution: "Certificação",
     type: "cert",
-    detail: "2 horas",
   },
   {
     year: "2024",
@@ -265,4 +262,5 @@ export const skillGroups: { label: string; items: string[] }[] = [
   { label: "Ferramentas", items: ["Docker", "Git", "JWT", "Swagger", "WebSockets"] },
   { label: "Embarcados & IoT", items: ["ESP32", "Sensores", "Wi-Fi", "Monitoramento"] },
   { label: "Adicionais", items: ["Inteligência Artificial", "Ciência de Dados"] },
+  { label: "Idiomas", items: ["Inglês — Em desenvolvimento", "Espanhol — Em desenvolvimento"] },
 ];

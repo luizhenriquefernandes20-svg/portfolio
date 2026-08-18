@@ -20,5 +20,5 @@ export interface EducationItem {
   title: string;
   institution: string;
   type: "degree" | "cert" | "course";
-  detail: string;
+  detail?: string;
 }

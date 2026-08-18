@@ -30,8 +30,8 @@ export function EduItem({ item, index = 0 }: { item: EducationItem; index?: numb
             {TYPE_LABEL[item.type]}
           </span>
         </div>
-        <p className="text-xs text-muted-foreground mb-0.5">{item.institution}</p>
-        <p className="text-xs text-muted-foreground/70">{item.detail}</p>
+        <p className={`text-xs text-muted-foreground ${item.detail ? "mb-0.5" : ""}`}>{item.institution}</p>
+        {item.detail && <p className="text-xs text-muted-foreground/70">{item.detail}</p>}
       </div>
     </motion.div>
   );

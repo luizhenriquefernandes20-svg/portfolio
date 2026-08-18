@@ -1,0 +1,109 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "aox-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5501", "--directory", "C:/Users/Luiz/Downloads/aox-arquitetura-e-interiores"],
+      "port": 5501
+    },
+    {
+      "name": "sistema-estoque",
+      "runtimeExecutable": "C:/Users/Luiz/Downloads/sistema-estoque/.venv/Scripts/python.exe",
+      "runtimeArgs": ["C:/Users/Luiz/Downloads/sistema-estoque/app.py"],
+      "port": 5000
+    },
+    {
+      "name": "chat-server",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/chat-tempo-real/server", "run", "dev"],
+      "port": 4000
+    },
+    {
+      "name": "chat-client",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/chat-tempo-real/client", "run", "dev"],
+      "port": 5174
+    },
+    {
+      "name": "financeiro-server",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/sistema-financeiro/server", "run", "dev"],
+      "port": 3001
+    },
+    {
+      "name": "financeiro-client",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/sistema-financeiro/client", "run", "dev"],
+      "port": 5175
+    },
+    {
+      "name": "dashboard-server",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/dashboard-admin/server", "run", "dev"],
+      "port": 3002
+    },
+    {
+      "name": "dashboard-client",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/dashboard-admin/client", "run", "dev"],
+      "port": 5176
+    },
+    {
+      "name": "spotify-web-player",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/spotify-web-player", "run", "dev"],
+      "port": 5177,
+      "url": "http://127.0.0.1:5177"
+    },
+    {
+      "name": "bm-materiais",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5502", "--directory", "C:/Users/Luiz/Downloads/bm-materiais-construcao"],
+      "port": 5502
+    },
+    {
+      "name": "bm-itajuba-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/Luiz/Downloads/bm-itajuba-site", "run", "dev", "--", "--port", "5183"],
+      "port": 5183
+    },
+    {
+      "name": "andrea-doca-bolos",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5504", "--directory", "C:/Users/Luiz/Downloads/andrea-doca-bolos"],
+      "port": 5504
+    },
+    {
+      "name": "pizzaria-capannone",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5505", "--directory", "C:/Users/Luiz/Downloads/portfolio luiz/pizzaria-capannone"],
+      "port": 5505
+    },
+    {
+      "name": "sushi-nami",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5506", "--directory", "C:/Users/Luiz/Downloads/portfolio luiz/sushi-nami"],
+      "port": 5506
+    },
+    {
+      "name": "dashboard-kiln",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5507", "--directory", "C:/Users/Luiz/Downloads/portfolio luiz/dashboard-kiln"],
+      "port": 5507
+    },
+    {
+      "name": "discord-clone",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5508", "--directory", "C:/Users/Luiz/Downloads/portfolio luiz/discord-clone"],
+      "port": 5508
+    }
+  ]
+}

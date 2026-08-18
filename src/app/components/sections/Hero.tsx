@@ -36,10 +36,15 @@ export function Hero({ onScrollTo }: { onScrollTo: (id: string) => void }) {
       </motion.p>
       <motion.h1
         variants={item}
-        className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-foreground leading-[1.05] tracking-tight mb-6"
+        className="text-4xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight mb-6"
         style={{ fontFamily: "'Geist Mono', monospace" }}
       >
-        Luiz Henrique
+        <span
+          className="bg-clip-text text-transparent"
+          style={{ backgroundImage: "linear-gradient(120deg, #ececf7 0%, #c8b3f6 45%, #7546e8 100%)" }}
+        >
+          Luiz Henrique
+        </span>
         <br />
         <span className="text-muted-foreground font-light">Full Stack Dev</span>
       </motion.h1>

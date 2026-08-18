@@ -23,8 +23,8 @@ export function Projects({
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2
-            className="font-mono text-xs tracking-[0.2em] uppercase text-accent"
-            style={{ fontFamily: "'Geist Mono', monospace" }}
+            className="text-xs tracking-[0.2em] uppercase text-accent"
+            style={{ fontFamily: "'Minecraft', monospace" }}
           >
             Trabalhos em Destaque
           </h2>
@@ -46,8 +46,8 @@ export function Projects({
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2
-            className="font-mono text-xs tracking-[0.2em] uppercase text-accent"
-            style={{ fontFamily: "'Geist Mono', monospace" }}
+            className="text-xs tracking-[0.2em] uppercase text-accent"
+            style={{ fontFamily: "'Minecraft', monospace" }}
           >
             Outros Projetos
           </h2>

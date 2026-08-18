@@ -12,8 +12,8 @@ export function Skills() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       <h2
-        className="text-xs tracking-[0.2em] uppercase text-accent mb-10"
-        style={{ fontFamily: "'Minecraft', monospace" }}
+        className="font-mono text-xs tracking-[0.2em] uppercase text-accent mb-10"
+        style={{ fontFamily: "'Geist Mono', monospace" }}
       >
         Skills & Stack
       </h2>

@@ -6,8 +6,8 @@ export function Education({ items }: { items: EducationItem[] }) {
   return (
     <section id="formacao" className="pb-20 sm:pb-28">
       <motion.h2
-        className="text-xs tracking-[0.2em] uppercase text-accent mb-10"
-        style={{ fontFamily: "'Minecraft', monospace" }}
+        className="font-mono text-xs tracking-[0.2em] uppercase text-accent mb-10"
+        style={{ fontFamily: "'Geist Mono', monospace" }}
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}

@@ -1,16 +1,9 @@
+import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
-import { ChevronRight, ArrowUpRight } from "lucide-react";
-import { Project } from "../../types";
+import type { Project } from "../../types";
+import { ProjectImage } from "./ProjectImage";
 
-export function FeaturedCard({
-  project,
-  index = 0,
-  onOpen,
-}: {
-  project: Project;
-  index?: number;
-  onOpen: () => void;
-}) {
+export function FeaturedCard({ project, index = 0, onOpen }: { project: Project; index?: number; onOpen: () => void }) {
   return (
     <motion.div
       className="group relative overflow-hidden border border-border rounded-xl bg-card hover:border-border/60 transition-colors duration-300"
@@ -20,11 +13,10 @@ export function FeaturedCard({
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -4 }}
     >
-      <div className="aspect-[16/8] overflow-hidden bg-muted">
-        <img
+      <div className="relative aspect-[16/8] overflow-hidden bg-muted">
+        <ProjectImage
           src={project.image}
           alt={project.title}
-          loading="lazy"
           className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
         />
       </div>
@@ -40,6 +32,7 @@ export function FeaturedCard({
         <p className="text-sm text-muted-foreground leading-relaxed mb-5">{project.description}</p>
         <div className="flex items-center gap-4">
           <button
+            type="button"
             onClick={onOpen}
             className="flex items-center gap-1.5 text-sm font-mono text-foreground hover:text-accent transition-colors group/btn"
           >

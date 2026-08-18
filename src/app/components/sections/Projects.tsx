@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Project } from "../../types";
+import type { Project } from "../../types";
 import { FeaturedCard } from "../project/FeaturedCard";
 import { ProjectCard } from "../project/ProjectCard";
 

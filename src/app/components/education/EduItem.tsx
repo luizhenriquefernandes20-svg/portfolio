@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { EducationItem } from "../../types";
+import type { EducationItem } from "../../types";
 
 const TYPE_LABEL: Record<EducationItem["type"], string> = {
   degree: "Graduação",

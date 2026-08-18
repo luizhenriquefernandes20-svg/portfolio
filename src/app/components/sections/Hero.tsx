@@ -1,15 +1,15 @@
-import { motion } from "motion/react";
 import { Download } from "lucide-react";
+import { motion, type Variants } from "motion/react";
 import { contactInfo } from "../../data";
 
-const container = {
+const container: Variants = {
   hidden: {},
   show: {
     transition: { staggerChildren: 0.12, delayChildren: 0.05 },
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 16 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
 };
@@ -48,13 +48,10 @@ export function Hero({ onScrollTo }: { onScrollTo: (id: string) => void }) {
         <br />
         <span className="text-muted-foreground font-light">Full Stack Dev</span>
       </motion.h1>
-      <motion.p
-        variants={item}
-        className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10"
-      >
-        Apaixonado por tecnologia, automação e desenvolvimento de soluções modernas. Atualmente
-        estudo Desenvolvimento de Software e busco minha primeira oportunidade profissional,
-        sempre focando em escrever código limpo, escalável e seguindo boas práticas.
+      <motion.p variants={item} className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10">
+        Apaixonado por tecnologia, automação e desenvolvimento de soluções modernas. Atualmente estudo Desenvolvimento
+        de Software e busco minha primeira oportunidade profissional, sempre focando em escrever código limpo, escalável
+        e seguindo boas práticas.
       </motion.p>
       <motion.div variants={item} className="flex flex-wrap gap-3">
         <motion.button

@@ -1,15 +1,8 @@
 import { motion } from "motion/react";
-import { Project } from "../../types";
+import type { Project } from "../../types";
+import { ProjectImage } from "./ProjectImage";
 
-export function ProjectCard({
-  project,
-  index = 0,
-  onOpen,
-}: {
-  project: Project;
-  index?: number;
-  onOpen: () => void;
-}) {
+export function ProjectCard({ project, index = 0, onOpen }: { project: Project; index?: number; onOpen: () => void }) {
   return (
     <motion.button
       onClick={onOpen}
@@ -20,11 +13,10 @@ export function ProjectCard({
       transition={{ duration: 0.5, delay: (index % 4) * 0.08, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -4 }}
     >
-      <div className="aspect-[16/9] overflow-hidden rounded-lg bg-muted mb-4">
-        <img
+      <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-muted mb-4">
+        <ProjectImage
           src={project.image}
           alt={project.title}
-          loading="lazy"
           className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-[1.03] transition-all duration-400"
         />
       </div>

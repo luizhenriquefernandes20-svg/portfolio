@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { EducationItem } from "../../types";
+import type { EducationItem } from "../../types";
 import { EduItem } from "../education/EduItem";
 
 export function Education({ items }: { items: EducationItem[] }) {

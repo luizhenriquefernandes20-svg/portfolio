@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { ExternalLink, Github, X } from "lucide-react";
 import { motion } from "motion/react";
-import { X, Github, ExternalLink } from "lucide-react";
-import { Project } from "../../types";
+import { useEffect } from "react";
+import type { Project } from "../../types";
 
 export function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
   useEffect(() => {
@@ -17,10 +17,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
   const hasLinks = project.github || project.demo;
 
   return (
-    <div
-      className="pointer-events-auto fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6"
-      onClick={(e) => e.target === e.currentTarget && onClose()}
-    >
+    <div className="pointer-events-auto fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6">
       <motion.div
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
         onClick={onClose}
@@ -39,6 +36,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
         <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-card border-b border-border">
           <span className="font-mono text-xs text-muted-foreground tracking-widest uppercase">Detalhes do Projeto</span>
           <button
+            type="button"
             onClick={onClose}
             className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             aria-label="Fechar"
@@ -53,7 +51,10 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
             <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
             <div className="flex flex-wrap gap-2 mt-4">
               {project.tags.map((tag) => (
-                <span key={tag} className="font-mono text-xs px-2.5 py-1 bg-muted text-muted-foreground rounded border border-border">
+                <span
+                  key={tag}
+                  className="font-mono text-xs px-2.5 py-1 bg-muted text-muted-foreground rounded border border-border"
+                >
                   {tag}
                 </span>
               ))}

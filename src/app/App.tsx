@@ -1,26 +1,25 @@
-import { useState } from "react";
 import { AnimatePresence } from "motion/react";
-import { Header } from "./components/layout/Header";
-import { Footer } from "./components/layout/Footer";
+import { lazy, Suspense, useState } from "react";
 import { BackgroundVideo } from "./components/layout/BackgroundVideo";
-import { Hero } from "./components/sections/Hero";
-import { Skills } from "./components/sections/Skills";
-import { Projects } from "./components/sections/Projects";
-import { Education } from "./components/sections/Education";
+import { Footer } from "./components/layout/Footer";
+import { Header } from "./components/layout/Header";
+import { ScrollProgress } from "./components/layout/ScrollProgress";
 import { Contact } from "./components/sections/Contact";
-import { ProjectModal } from "./components/project/ProjectModal";
-import { projects, education } from "./data";
-import { Project } from "./types";
+import { Education } from "./components/sections/Education";
+import { Hero } from "./components/sections/Hero";
+import { Projects } from "./components/sections/Projects";
+import { Skills } from "./components/sections/Skills";
+import { education, projects } from "./data";
+import { scrollToId } from "./lib/scroll";
+import type { Project } from "./types";
+
+const ProjectModal = lazy(() => import("./components/project/ProjectModal").then((m) => ({ default: m.ProjectModal })));
 
 export default function App() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   const featured = projects.filter((p) => p.featured);
   const others = projects.filter((p) => !p.featured);
-
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div
@@ -35,6 +34,7 @@ export default function App() {
         Cada bloco de conteúdo real reativa pointer-events explicitamente.
       */}
       <BackgroundVideo />
+      <ScrollProgress />
 
       <a
         href="#main-content"
@@ -48,7 +48,7 @@ export default function App() {
       </div>
 
       <main id="main-content" className="pointer-events-auto relative z-10 max-w-5xl mx-auto px-5 sm:px-8">
-        <Hero onScrollTo={scrollTo} />
+        <Hero onScrollTo={scrollToId} />
         <Skills />
         <Projects featured={featured} others={others} onOpenProject={setActiveProject} />
         <Education items={education} />
@@ -61,11 +61,9 @@ export default function App() {
 
       <AnimatePresence>
         {activeProject && (
-          <ProjectModal
-            key={activeProject.id}
-            project={activeProject}
-            onClose={() => setActiveProject(null)}
-          />
+          <Suspense fallback={null}>
+            <ProjectModal key={activeProject.id} project={activeProject} onClose={() => setActiveProject(null)} />
+          </Suspense>
         )}
       </AnimatePresence>
     </div>

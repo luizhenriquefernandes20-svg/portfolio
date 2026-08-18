@@ -10,10 +10,7 @@ export function Footer() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-5xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span
-          className="font-mono text-xs text-muted-foreground"
-          style={{ fontFamily: "'Geist Mono', monospace" }}
-        >
+        <span className="font-mono text-xs text-muted-foreground" style={{ fontFamily: "'Geist Mono', monospace" }}>
           luiz.dev
         </span>
         <span className="font-mono text-xs text-muted-foreground">

@@ -1,5 +1,5 @@
-import { motion } from "motion/react";
 import { ArrowUpRight, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { motion } from "motion/react";
 import { contactInfo } from "../../data";
 
 export function Contact() {

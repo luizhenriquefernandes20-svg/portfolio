@@ -21,9 +21,9 @@ export function BackgroundVideo() {
           se misturando (mix-blend-mode) para reforçar o efeito de "tinta"
           fluida por trás da esfera do vídeo. */}
       {!reduceMotion &&
-        BLOBS.map((blob, i) => (
+        BLOBS.map((blob) => (
           <motion.div
-            key={i}
+            key={blob.color}
             className="absolute rounded-full pointer-events-none"
             style={{
               width: blob.size,

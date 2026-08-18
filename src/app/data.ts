@@ -262,8 +262,11 @@ export const skillGroups: { label: string; items: string[] }[] = [
   { label: "Ferramentas", items: ["Docker", "Git", "JWT", "Swagger", "WebSockets"] },
   { label: "Embarcados & IoT", items: ["ESP32", "Sensores", "Wi-Fi", "Monitoramento"] },
   { label: "Adicionais", items: ["Inteligência Artificial", "Ciência de Dados"] },
-  {
-    label: "Idiomas",
-    items: ["Português — Nativo/Fluente", "Inglês — Avançado", "Espanhol — Intermediário", "Italiano — Básico"],
-  },
+];
+
+export const languages: { name: string; level: string; levelIndex: number }[] = [
+  { name: "Português", level: "Nativo/Fluente", levelIndex: 4 },
+  { name: "Inglês", level: "Avançado", levelIndex: 3 },
+  { name: "Espanhol", level: "Intermediário", levelIndex: 2 },
+  { name: "Italiano", level: "Básico", levelIndex: 1 },
 ];

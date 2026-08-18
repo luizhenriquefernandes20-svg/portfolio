@@ -34,6 +34,7 @@ test.describe("Portfolio — page shell", () => {
       { label: "Skills", id: "skills" },
       { label: "Projetos", id: "projetos" },
       { label: "Formação", id: "formacao" },
+      { label: "Idiomas", id: "idiomas" },
       { label: "Contato", id: "contato" },
     ]) {
       await page.getByRole("navigation").getByRole("button", { name: label }).click();
@@ -51,6 +52,22 @@ test.describe("Portfolio — page shell", () => {
     const featuredCards = page.locator("section#projetos").getByRole("heading", { level: 3 });
     await expect(featuredCards).toHaveCount(4);
     await expect(page.getByRole("heading", { name: "Capannone Pizzaria Artesanal" })).toBeVisible();
+  });
+
+  test("languages section lists proficiency for each language", async ({ page }) => {
+    await page.goto("/");
+    await page.getByRole("navigation").getByRole("button", { name: "Idiomas" }).click();
+
+    await expect(page.getByRole("heading", { name: "Idiomas" })).toBeVisible();
+    for (const { name, level } of [
+      { name: "Português", level: "Nativo/Fluente" },
+      { name: "Inglês", level: "Avançado" },
+      { name: "Espanhol", level: "Intermediário" },
+      { name: "Italiano", level: "Básico" },
+    ]) {
+      const row = page.locator("section#idiomas").getByText(name, { exact: true }).locator("..");
+      await expect(row.getByText(level)).toBeVisible();
+    }
   });
 
   test("project screenshots have real src and descriptive alt text", async ({ page }) => {

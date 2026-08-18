@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { label: "Skills", id: "skills" },
   { label: "Projetos", id: "projetos" },
   { label: "Formação", id: "formacao" },
+  { label: "Idiomas", id: "idiomas" },
   { label: "Contato", id: "contato" },
 ];
 

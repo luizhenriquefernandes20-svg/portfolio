@@ -7,6 +7,7 @@ import { ScrollProgress } from "./components/layout/ScrollProgress";
 import { Contact } from "./components/sections/Contact";
 import { Education } from "./components/sections/Education";
 import { Hero } from "./components/sections/Hero";
+import { Languages } from "./components/sections/Languages";
 import { Projects } from "./components/sections/Projects";
 import { Skills } from "./components/sections/Skills";
 import { education, projects } from "./data";
@@ -53,6 +54,7 @@ export default function App() {
         <Skills />
         <Projects featured={featured} others={others} onOpenProject={setActiveProject} />
         <Education items={education} />
+        <Languages />
         <Contact />
       </main>
 

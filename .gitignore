@@ -2,6 +2,10 @@ node_modules/
 dist/
 .env
 *.local
+coverage/
+test-results/
+playwright-report/
+blob-report/
 
 # Projetos com repositório git próprio, vivem aqui só por conveniência local
 /dashboard-kiln/

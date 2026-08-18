@@ -3,6 +3,13 @@ module.exports = {
   extends: "dependency-cruiser/configs/recommended",
   forbidden: [
     {
+      name: "no-orphans",
+      comment: "Vitest loads src/test/setup.ts by path from vite.config.ts, not via an import statement.",
+      severity: "ignore",
+      from: { orphan: true, path: "^src/test/setup\\.ts$" },
+      to: {},
+    },
+    {
       name: "layout-no-feature-content",
       comment:
         "components/layout is generic page chrome (header, footer, background). It must not depend on " +

@@ -11,6 +11,10 @@
     "lint:fix": "biome check --write .",
     "knip": "knip",
     "arch": "depcruise src --config .dependency-cruiser.cjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
     "prepare": "husky"
   },
   "dependencies": {
@@ -24,16 +28,23 @@
     "@biomejs/biome": "^2.5.9",
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/vite": "4.1.12",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.5",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "4.7.0",
+    "@vitest/coverage-v8": "^4.1.11",
     "dependency-cruiser": "^18.2.0",
     "husky": "^9.1.7",
+    "jsdom": "^30.0.1",
     "knip": "^6.32.2",
     "tailwindcss": "4.1.12",
     "typescript": "^5.9.3",
-    "vite": "6.4.3"
+    "vite": "6.4.3",
+    "vitest": "^4.1.11"
   },
   "pnpm": {
     "overrides": {

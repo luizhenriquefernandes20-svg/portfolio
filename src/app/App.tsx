@@ -10,6 +10,7 @@ import { Hero } from "./components/sections/Hero";
 import { Projects } from "./components/sections/Projects";
 import { Skills } from "./components/sections/Skills";
 import { education, projects } from "./data";
+import { getFeaturedProjects, getOtherProjects } from "./lib/projects";
 import { scrollToId } from "./lib/scroll";
 import type { Project } from "./types";
 
@@ -18,8 +19,8 @@ const ProjectModal = lazy(() => import("./components/project/ProjectModal").then
 export default function App() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const featured = projects.filter((p) => p.featured);
-  const others = projects.filter((p) => !p.featured);
+  const featured = getFeaturedProjects(projects);
+  const others = getOtherProjects(projects);
 
   return (
     <div

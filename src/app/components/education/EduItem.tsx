@@ -16,7 +16,7 @@ const TYPE_COLOR: Record<EducationItem["type"], string> = {
 export function EduItem({ item, index = 0 }: { item: EducationItem; index?: number }) {
   return (
     <motion.div
-      className="group flex gap-5 py-5 border-b border-border last:border-0 hover:bg-muted/30 transition-colors"
+      className="group flex gap-5 px-5 py-5 sm:px-6 border-b border-border last:border-0 hover:bg-muted/30 transition-colors"
       initial={{ opacity: 0, x: -12 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-60px" }}

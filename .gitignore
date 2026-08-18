@@ -2,3 +2,9 @@ node_modules/
 dist/
 .env
 *.local
+
+# Projetos com repositório git próprio, vivem aqui só por conveniência local
+/dashboard-kiln/
+/discord-clone/
+/pizzaria-capannone/
+/sushi-nami/

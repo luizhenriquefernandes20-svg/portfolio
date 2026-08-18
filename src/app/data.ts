@@ -185,6 +185,13 @@ export const education: EducationItem[] = [
     detail: "Curso Superior · Previsão de conclusão: 2026",
   },
   {
+    year: "2025 — 2026",
+    title: "Análise e Desenvolvimento de Sistemas",
+    institution: "ETEC Vasco Antonio Venchiarutti",
+    type: "degree",
+    detail: "Em andamento · Previsão de conclusão: 2026",
+  },
+  {
     year: "2022 — 2024",
     title: "Técnico em Edificações",
     institution: "ETEC Vasco Antonio Venchiarutti",

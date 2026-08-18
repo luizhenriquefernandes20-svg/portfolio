@@ -262,5 +262,8 @@ export const skillGroups: { label: string; items: string[] }[] = [
   { label: "Ferramentas", items: ["Docker", "Git", "JWT", "Swagger", "WebSockets"] },
   { label: "Embarcados & IoT", items: ["ESP32", "Sensores", "Wi-Fi", "Monitoramento"] },
   { label: "Adicionais", items: ["Inteligência Artificial", "Ciência de Dados"] },
-  { label: "Idiomas", items: ["Inglês — Em desenvolvimento", "Espanhol — Em desenvolvimento"] },
+  {
+    label: "Idiomas",
+    items: ["Português — Nativo/Fluente", "Inglês — Avançado", "Espanhol — Intermediário", "Italiano — Básico"],
+  },
 ];

@@ -25,19 +25,21 @@ export function Hero({ onScrollTo }: { onScrollTo: (id: string) => void }) {
     >
       <motion.p
         variants={item}
-        className="font-mono text-xs text-accent tracking-[0.2em] uppercase mb-8 flex items-center gap-2"
+        className="font-mono text-xs text-accent tracking-[0.2em] uppercase mb-8 flex flex-wrap items-center gap-x-2 gap-y-1.5"
         style={{ fontFamily: "'Geist Mono', monospace" }}
       >
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+        <span className="flex items-center gap-2">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+          </span>
+          Disponível para projetos
         </span>
-        Disponível para projetos
         {contactInfo.location && (
-          <>
+          <span className="flex items-center gap-2">
             <span className="text-muted-foreground/40">·</span>
             <span className="text-muted-foreground normal-case tracking-normal">{contactInfo.location}</span>
-          </>
+          </span>
         )}
       </motion.p>
       <motion.h1

@@ -157,6 +157,20 @@
     @apply border-border outline-ring/50;
   }
 
+  html,
+  body {
+    /*
+      A esfera de vídeo arrastável no fundo (BackgroundVideo) é
+      intencionalmente maior que a viewport (width/height: 130%) para
+      poder ser arrastada sem mostrar bordas. Mesmo clipada visualmente
+      pelo próprio wrapper (fixed + overflow-hidden), esse elemento
+      "static" ainda contribui pro scrollWidth do documento e criava
+      scroll horizontal fantasma no mobile. Trava aqui, no nível mais
+      alto, garante que isso nunca aconteça independente da causa exata.
+    */
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
   }

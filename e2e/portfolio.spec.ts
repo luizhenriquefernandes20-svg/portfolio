@@ -130,7 +130,10 @@ test.describe("Responsive viewport", () => {
 
     await toggle.click();
     await expect(page.getByRole("button", { name: "Fechar menu" })).toBeVisible();
-    await expect(page.getByRole("button", { name: "Idiomas" })).toBeVisible();
+    // Escopado no cabeçalho e exato de propósito: getByRole casa o nome
+    // acessível por substring, então uma busca solta por "Idiomas" também
+    // acerta qualquer card de projeto cujo texto contenha a palavra.
+    await expect(page.getByRole("banner").getByRole("button", { name: "Idiomas", exact: true })).toBeVisible();
 
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth - document.documentElement.clientWidth

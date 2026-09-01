@@ -174,6 +174,24 @@ export const projects: Project[] = [
     github: "https://github.com/luizhenriquefernandes20-svg/orbit-chat-ui",
     demo: null,
   },
+  {
+    id: 11,
+    title: "TITAN — Tela de login em C++",
+    description:
+      "Aplicativo Windows nativo de arquivo único, sem frameworks nem DLLs externas: senha protegida com PBKDF2, cofre autenticado por DPAPI e interface em seis idiomas.",
+    tags: ["C++", "Win32", "GDI+", "PBKDF2", "DPAPI", "i18n"],
+    image: "/projects/titan-login.png",
+    problem:
+      "Telas de login costumam nascer bonitas e frágeis por dentro: senha guardada em texto puro, bloqueio por tentativas que evapora ao fechar o programa e arquivo de contas que qualquer um edita. Quis fazer o caminho inverso — partir da segurança e só então chegar na aparência.",
+    architecture:
+      "C++17 sobre Win32 e GDI+, sem Qt e sem dependência externa: um .exe de 430 KB que roda em qualquer Windows. A autenticação fica isolada da interface em auth.cpp e usa PBKDF2-HMAC-SHA256 com 600.000 iterações através da CNG do próprio sistema; como isso leva ~140 ms, roda numa thread separada para as animações não engasgarem.",
+    challenges:
+      "Impedir que o arquivo de contas fosse adulterado ou copiado para outra máquina: resolvido com um HMAC sobre o arquivo cuja chave é protegida por DPAPI, que a amarra à conta do Windows. Trocar um hash, apagar uma linha ou levar o cofre para outro PC é detectado — e o app guarda o arquivo suspeito como .bad em vez de sobrescrever em silêncio.",
+    impact:
+      "158 testes automatizados rodam no build e o abortam se algum falhar: 109 de núcleo e 49 de interface, que dirigem a janela de verdade por mensagens do Win32 e conferem o resultado pelo tamanho da janela e pelos arquivos gravados. Foi essa suíte que encontrou dois bugs de estado do mouse que a inspeção manual tinha deixado passar.",
+    github: "https://github.com/luizhenriquefernandes20-svg/titan-login",
+    demo: null,
+  },
 ];
 
 export const education: EducationItem[] = [
